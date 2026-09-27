@@ -1,0 +1,98 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+
+body {
+  background: radial-gradient(circle at 90% 8%, #ff7a2e 0%, #c8420c 18%, #3a0800 50%, #12070a 85%);
+  background-attachment: fixed;
+  font-family: system-ui, sans-serif;
+  color: #fff;
+}
+
+.site-content { position: relative; }
+
+/* ---- Desktop navbar ---- */
+.navbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 1.5rem 4vw;
+}
+.logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+.logo-img { height: 40px; width: auto; }
+.logo-text { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 1.5rem; letter-spacing: -0.5px; }
+.t-afflix { color: #fff; }
+.t-nova {
+  background: linear-gradient(90deg, #ff7a2e, #ffd23f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.nav-links { list-style: none; display: flex; gap: 2.2rem; }
+.nav-links a { color: rgba(255,255,255,.85); text-decoration: none; font-size: .95rem; font-weight: 500; }
+.nav-links a:hover { color: #fff; }
+.auth-buttons { display: flex; align-items: center; gap: .8rem; }
+.btn-login {
+  color: #fff; background: transparent; border: 1px solid rgba(255,255,255,.35);
+  padding: .55rem 1.3rem; border-radius: 999px; font-weight: 600; font-size: .9rem; text-decoration: none;
+}
+.btn-login:hover { border-color: rgba(255,255,255,.7); }
+.btn-signup {
+  color: #100e0b; background: #fff; padding: .6rem 1.4rem; border-radius: 999px;
+  font-weight: 600; font-size: .9rem; text-decoration: none;
+}
+
+.mobile-nav { display: none; }
+
+@media (max-width: 768px) {
+  .desktop-nav { display: none; }
+  .mobile-nav {
+    display: block;
+    position: fixed;
+    inset: 0;
+    height: 100dvh;
+    z-index: 999;
+    pointer-events: none;
+  }
+  .hero.hero { padding-top: 90px; }
+}
+
+/* ---- Hero ---- */
+.hero {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 3rem; padding: 5vh 6vw 10vh; min-height: 70vh;
+}
+.hero-text { max-width: 560px; }
+.hero-text h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); line-height: 1.1; font-weight: 800; }
+.hero-text .highlight { color: #ff9f43; }
+.hero-text p { margin-top: 1.2rem; font-size: 1.05rem; color: rgba(255,255,255,.75); line-height: 1.6; }
+.cta-btn {
+  display: inline-block; margin-top: 2rem; background: linear-gradient(90deg, #ff5e3a, #ec407a);
+  color: #fff; padding: .9rem 2.2rem; border-radius: 999px; font-weight: 700; text-decoration: none;
+  box-shadow: 0 8px 24px rgba(236,64,122,.35);
+}
+
+/* ---- Floating social icons ---- */
+.hero-icons {
+  position: relative; width: 280px; height: 280px; flex-shrink: 0;
+}
+.icon-float {
+  position: absolute; width: 64px; height: 64px; border-radius: 50%;
+  background: rgba(255,255,255,.08); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  animation: bob 4s ease-in-out infinite;
+}
+.icon-float svg { width: 30px; height: 30px; }
+.icon-fb { top: 10%; left: 5%; animation-delay: 0s; }
+.icon-wa { top: 0; right: 5%; animation-delay: .8s; }
+.icon-tw { bottom: 10%; left: 0; animation-delay: 1.6s; }
+.icon-tg { bottom: 0; right: 10%; animation-delay: 2.4s; }
+
+@keyframes bob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-16px); }
+}
+
+@media (max-width: 900px) {
+  .hero { flex-direction: column; text-align: center; padding-top: 4vh; }
+  .hero-icons { margin-top: 2rem; }
+}
