@@ -162,7 +162,7 @@ function StaggeredMenu({
 
       <header className="staggered-menu-header">
   <div className="sm-header-left">
-    <img src="assets/afflix-logo.png" alt="AfflixNova" className="sm-logo-img-small" />
+    <img src="assets/afflix-icon.png" alt="AfflixNova" className="sm-logo-img-small" />
 <span className="sm-logo-text">AfflixNova</span>
     <a href="/signup" className="sm-header-signup">Sign Up</a>
   </div>
