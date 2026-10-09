@@ -417,9 +417,7 @@
   background: rgba(255,255,255,.08); color: #fff; text-decoration: none;
   font-size: .85rem; font-weight: 600; transition: background .2s ease;
 }
-@media (max-width: 380px) {
-  .sm-logo-text { display: none; }
-}
+
 .sm-logo-img-small { height: 26px; width: auto; }
 
 .sm-footer-link svg { width: 18px; height: 18px; }
