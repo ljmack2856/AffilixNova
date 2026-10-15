@@ -4,7 +4,10 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>AfflixNova — Earn by Sharing What You Love</title>
-<link rel="icon" type="image/png" href="assets/afflixnova-icon.png">
+<link rel="icon" type="image/png" href="assets/afflixnova-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="stylesheet" href="staggered-menu.css">
 </head>
@@ -33,23 +36,24 @@
   <!-- Mobile navbar: React island (StaggeredMenu) mounts here -->
   <div id="staggered-menu-root" class="mobile-nav"></div>
 
-  <!-- Hero -->
-<section class="hero">
- <div class="hero-text">
-  <div class="hero-main">
-    <h1>Turn Your Following Into <span class="highlight">Income</span></h1>
-    <h2 class="hero-sub">Scale your earnings, one share at a time.</h2>
-    <ul class="hero-points">
-      <li>Promote on the pages you already run</li>
-      <li>Earn commission on every sale</li>
-    </ul>
-  </div>
-  <div class="cta-row">
-    <a href="#signup" class="cta-btn">Start Earning</a>
-    <a href="#how-it-works" class="cta-btn-ghost">How it works</a>
-  </div>
-</div>
-<div class="hero-art" aria-hidden="false">
+  <!-- ============ HERO ============ -->
+  <section class="hero">
+    <div class="hero-text">
+      <div class="hero-main">
+        <h1>Turn Your Following Into <span class="highlight">Income</span></h1>
+        <h2 class="hero-sub">Scale your earnings, one share at a time.</h2>
+        <ul class="hero-points">
+          <li>Promote on the pages you already run</li>
+          <li>Earn commission on every sale</li>
+        </ul>
+      </div>
+      <div class="cta-row">
+        <a href="#signup" class="cta-btn">Start Earning</a>
+        <a href="#how-it-works" class="cta-btn-ghost">How it works</a>
+      </div>
+    </div>
+
+    <div class="hero-art">
 <svg viewBox="0 0 560 520" role="img" aria-labelledby="art-title">
   <title id="art-title">A creator shares a product post, followers see it, a sale is made and commission is earned</title>
   <defs>
@@ -163,146 +167,163 @@
   <circle cx="338" cy="62" r="3" fill="#fff" fill-opacity=".5"/>
   <circle cx="30" cy="300" r="2.5" fill="#fff" fill-opacity=".35"/>
 </svg>
-</div>
-</div>
-</section>
-<section class="how" id="how-it-works">
-  <div class="how-head">
-    <span class="eyebrow">How it works</span>
-    <h2>Start earning in <span class="highlight">4 steps</span></h2>
-    <p>From sign-up to your first commission, this is the whole journey.</p>
-  </div>
+    </div>
+  </section>
 
-  <ol class="how-steps">
-    <li class="how-step" data-step="01">
-      <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M19 8v6M16 11h6"/></svg></span>
-      <h3>Create your account</h3>
-      <p>Sign up and tell us where your followers are: Facebook, WhatsApp, Twitter or Telegram.</p>
-    </li>
-    <li class="how-step" data-step="02">
-      <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
-      <h3>Pick products to promote</h3>
-      <p>Browse local accessories from Kenyan sellers and choose what suits your audience.</p>
-    </li>
-    <li class="how-step" data-step="03">
-      <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="17" cy="6" r="2.5"/><circle cx="17" cy="18" r="2.5"/><path d="M8.2 10.8l6.6-3.6M8.2 13.2l6.6 3.6"/></svg></span>
-      <h3>Share with your followers</h3>
-      <p>Post your picks on your own pages, the same way you already talk to your audience.</p>
-    </li>
-    <li class="how-step" data-step="04">
-      <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 15l6-6"/><circle cx="9.5" cy="9.5" r="1"/><circle cx="14.5" cy="14.5" r="1"/></svg></span>
-      <h3>Earn on every sale</h3>
-      <p>When someone buys because of your post, you earn a commission.</p>
-    </li>
-  </ol>
+  <!-- ============ HOW IT WORKS ============ -->
+  <section class="how" id="how-it-works">
+    <div class="sec-head">
+      <span class="eyebrow">How it works</span>
+      <h2>Start earning in <span class="highlight">4 steps</span></h2>
+      <p>From sign-up to your first commission, this is the whole journey.</p>
+    </div>
 
-  <div class="how-cta">
-    <a href="#signup" class="cta-btn">Start Earning</a>
-  </div>
-</section>
-<section class="prod" id="products">
-  <div class="how-head">
-    <span class="eyebrow">Product categories</span>
-    <h2>Promote what your followers <span class="highlight">love</span></h2>
-    <p>Pick the categories that suit your audience when you sign up, and change them whenever you like. Whatever you pick is what you can copy and post on your pages.</p>
-  </div>
-<div class="sc-stack">
+    <ol class="how-steps">
+      <li class="how-step" data-step="01">
+        <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20c0-3.6 2.9-6 6.5-6s6.5 2.4 6.5 6"/><path d="M19 8v6M16 11h6"/></svg></span>
+        <h3>Create your account</h3>
+        <p>Sign up and tell us where your followers are: Facebook, WhatsApp, Twitter or Telegram.</p>
+      </li>
+      <li class="how-step" data-step="02">
+        <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg></span>
+        <h3>Pick products to promote</h3>
+        <p>Browse local accessories from Kenyan sellers and choose what suits your audience.</p>
+      </li>
+      <li class="how-step" data-step="03">
+        <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.5"/><circle cx="17" cy="6" r="2.5"/><circle cx="17" cy="18" r="2.5"/><path d="M8.2 10.8l6.6-3.6M8.2 13.2l6.6 3.6"/></svg></span>
+        <h3>Share with your followers</h3>
+        <p>Post your picks on your own pages, the same way you already talk to your audience.</p>
+      </li>
+      <li class="how-step" data-step="04">
+        <span class="how-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 15l6-6"/><circle cx="9.5" cy="9.5" r="1"/><circle cx="14.5" cy="14.5" r="1"/></svg></span>
+        <h3>Earn on every sale</h3>
+        <p>When someone buys because of your post, you earn a commission.</p>
+      </li>
+    </ol>
 
-  <article class="sc-card" style="--i:0; --chars:11">
-    <p class="sc-top">01 — Electronics</p>
-    <h3 class="sc-title">Electronics</h3>
-    <ul class="sc-photos">
-      <li class="sc-photo"><img src="assets/products/electronics/tvs.jpeg" alt="Television" width="600" height="450" loading="lazy" decoding="async"><span>TVs</span></li>
-      <li class="sc-photo"><img src="assets/products/electronics/laptops.jpeg" alt="Laptop" width="600" height="450" loading="lazy" decoding="async"><span>Laptops</span></li>
-      <li class="sc-photo"><img src="assets/products/electronics/phones.jpeg" alt="Smartphone" width="600" height="450" loading="lazy" decoding="async"><span>Phones</span></li>
-      <li class="sc-photo"><img src="assets/products/electronics/speakers.jpeg" alt="Speaker" width="600" height="450" loading="lazy" decoding="async"><span>Speakers</span></li>
-    </ul>
-    <p class="sc-foot">TVs, laptops and the gadgets people love to talk about. Best for tech, gadget and gaming pages.</p>
-  </article>
+    <div class="how-cta">
+      <a href="#signup" class="cta-btn">Start Earning</a>
+    </div>
+  </section>
 
-  <article class="sc-card" style="--i:1; --chars:4">
-    <p class="sc-top">02 — Home accessories</p>
-    <h3 class="sc-title">Home</h3>
-    <ul class="sc-photos">
-      <li class="sc-photo"><img src="assets/products/home/lighting.jpeg" alt="Lamp" width="600" height="450" loading="lazy" decoding="async"><span>Lighting</span></li>
-      <li class="sc-photo"><img src="assets/products/home/wall-decor.jpeg" alt="Wall décor" width="600" height="450" loading="lazy" decoding="async"><span>Wall décor</span></li>
-      <li class="sc-photo"><img src="assets/products/home/cushions.jpeg" alt="Cushions" width="600" height="450" loading="lazy" decoding="async"><span>Cushions</span></li>
-      <li class="sc-photo"><img src="assets/products/home/kitchenware.jpeg" alt="Kitchenware" width="600" height="450" loading="lazy" decoding="async"><span>Kitchenware</span></li>
-    </ul>
-    <p class="sc-foot">Lighting, décor and the little touches that make a house feel like home. Best for home, family and lifestyle pages.</p>
-  </article>
+  <!-- ============ PRODUCT CATEGORIES ============ -->
+  <section class="prod" id="products">
+    <div class="sec-head">
+      <span class="eyebrow">Product categories</span>
+      <h2>Promote what your followers <span class="highlight">love</span></h2>
+      <p>Pick the categories that suit your audience when you sign up, and change them whenever you like. Whatever you pick is what you can copy and post on your pages.</p>
+    </div>
 
-  <article class="sc-card" style="--i:2; --chars:6">
-    <p class="sc-top">03 — Office equipment</p>
-    <h3 class="sc-title">Office</h3>
-    <ul class="sc-photos">
-      <li class="sc-photo"><img src="assets/products/office/chairs.jpeg" alt="Office chair" width="600" height="450" loading="lazy" decoding="async"><span>Office chairs</span></li>
-      <li class="sc-photo"><img src="assets/products/office/desks.jpeg" alt="Office desk" width="600" height="450" loading="lazy" decoding="async"><span>Desks</span></li>
-      <li class="sc-photo"><img src="assets/products/office/shelving.jpeg" alt="Shelving" width="600" height="450" loading="lazy" decoding="async"><span>Shelving</span></li>
-      <li class="sc-photo"><img src="assets/products/office/stationery.jpeg" alt="Stationery" width="600" height="450" loading="lazy" decoding="async"><span>Stationery</span></li>
-    </ul>
-    <p class="sc-foot">Chairs, desks and gear for people who work from home or run a business. Best for business, student and work-from-home pages.</p>
-  </article>
+    <div class="sc-stack">
+    <article class="sc-card" style="--i:0">
+      <div class="sc-info">
+        <div class="sc-head">
+          <p class="sc-count">01 / 05</p>
+          <h3 class="sc-name">Electronics</h3>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">TVs, laptops and the gadgets people love to talk about.</p>
+          <p class="sc-fit">Best for tech, gadget and gaming pages</p>
+        </div>
+      </div>
+      <ul class="sc-photos">
+        <li class="sc-photo"><img src="assets/products/electronics/tvs.jpeg" alt="Television" width="600" height="450" loading="lazy" decoding="async"><span>TVs</span></li>
+        <li class="sc-photo"><img src="assets/products/electronics/laptops.jpeg" alt="Laptop" width="600" height="450" loading="lazy" decoding="async"><span>Laptops</span></li>
+        <li class="sc-photo"><img src="assets/products/electronics/phones.jpeg" alt="Smartphone" width="600" height="450" loading="lazy" decoding="async"><span>Phones</span></li>
+        <li class="sc-photo"><img src="assets/products/electronics/speakers.jpeg" alt="Speaker" width="600" height="450" loading="lazy" decoding="async"><span>Speakers</span></li>
+      </ul>
+    </article>
 
-  <article class="sc-card" style="--i:3; --chars:7">
-    <p class="sc-top">04 — Clothes</p>
-    <h3 class="sc-title">Clothes</h3>
-    <ul class="sc-photos">
-      <li class="sc-photo"><img src="assets/products/clothes/tops.jpeg" alt="Tops" width="600" height="450" loading="lazy" decoding="async"><span>Tops</span></li>
-      <li class="sc-photo"><img src="assets/products/clothes/dresses.jpeg" alt="Dresses" width="600" height="450" loading="lazy" decoding="async"><span>Dresses</span></li>
-      <li class="sc-photo"><img src="assets/products/clothes/trousers.jpeg" alt="Trousers" width="600" height="450" loading="lazy" decoding="async"><span>Trousers</span></li>
-      <li class="sc-photo"><img src="assets/products/clothes/jackets.jpeg" alt="Jackets" width="600" height="450" loading="lazy" decoding="async"><span>Jackets</span></li>
-    </ul>
-    <p class="sc-foot">Everyday and statement pieces your followers can wear anywhere. Best for fashion and style pages.</p>
-  </article>
+    <article class="sc-card" style="--i:1">
+      <div class="sc-info">
+        <div class="sc-head">
+          <p class="sc-count">02 / 05</p>
+          <h3 class="sc-name">Home accessories</h3>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">Lighting, décor and the little touches that make a house feel like home.</p>
+          <p class="sc-fit">Best for home, family and lifestyle pages</p>
+        </div>
+      </div>
+      <ul class="sc-photos">
+        <li class="sc-photo"><img src="assets/products/home/lighting.jpeg" alt="Lamp" width="600" height="450" loading="lazy" decoding="async"><span>Lighting</span></li>
+        <li class="sc-photo"><img src="assets/products/home/wall-decor.jpeg" alt="Wall décor" width="600" height="450" loading="lazy" decoding="async"><span>Wall décor</span></li>
+        <li class="sc-photo"><img src="assets/products/home/cushions.jpeg" alt="Cushions" width="600" height="450" loading="lazy" decoding="async"><span>Cushions</span></li>
+        <li class="sc-photo"><img src="assets/products/home/kitchenware.jpeg" alt="Kitchenware" width="600" height="450" loading="lazy" decoding="async"><span>Kitchenware</span></li>
+      </ul>
+    </article>
 
-  <article class="sc-card" style="--i:4; --chars:5">
-    <p class="sc-top">05 — Shoes</p>
-    <h3 class="sc-title">Shoes</h3>
-    <ul class="sc-photos">
-      <li class="sc-photo"><img src="assets/products/shoes/sneakers.jpeg" alt="Sneakers" width="600" height="450" loading="lazy" decoding="async"><span>Sneakers</span></li>
-      <li class="sc-photo"><img src="assets/products/shoes/sandals.jpeg" alt="Sandals" width="600" height="450" loading="lazy" decoding="async"><span>Sandals</span></li>
-      <li class="sc-photo"><img src="assets/products/shoes/formal.jpeg" alt="Formal shoes" width="600" height="450" loading="lazy" decoding="async"><span>Formal</span></li>
-      <li class="sc-photo"><img src="assets/products/shoes/boots.jpeg" alt="Boots" width="600" height="450" loading="lazy" decoding="async"><span>Boots</span></li>
-    </ul>
-    <p class="sc-foot">Sneakers, sandals and formal pairs for every occasion. Best for fashion, sports and sneaker pages.</p>
-  </article>
+    <article class="sc-card" style="--i:2">
+      <div class="sc-info">
+        <div class="sc-head">
+          <p class="sc-count">03 / 05</p>
+          <h3 class="sc-name">Office equipment</h3>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">Chairs, desks and gear for people who work from home or run a business.</p>
+          <p class="sc-fit">Best for business, student and work-from-home pages</p>
+        </div>
+      </div>
+      <ul class="sc-photos">
+        <li class="sc-photo"><img src="assets/products/office/chairs.jpeg" alt="Office chair" width="600" height="450" loading="lazy" decoding="async"><span>Office chairs</span></li>
+        <li class="sc-photo"><img src="assets/products/office/desks.jpeg" alt="Office desk" width="600" height="450" loading="lazy" decoding="async"><span>Desks</span></li>
+        <li class="sc-photo"><img src="assets/products/office/shelving.jpeg" alt="Shelving" width="600" height="450" loading="lazy" decoding="async"><span>Shelving</span></li>
+        <li class="sc-photo"><img src="assets/products/office/stationery.jpeg" alt="Stationery" width="600" height="450" loading="lazy" decoding="async"><span>Stationery</span></li>
+      </ul>
+    </article>
 
-</div>
-  <div class="prod-cta">
-    <p>You'll choose your categories when you sign up, and you can change them any time.</p>
-    <a href="#signup" class="cta-btn">Start Earning</a>
-  </div>
-</section>
+    <article class="sc-card" style="--i:3">
+      <div class="sc-info">
+        <div class="sc-head">
+          <p class="sc-count">04 / 05</p>
+          <h3 class="sc-name">Clothes</h3>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">Everyday and statement pieces your followers can wear anywhere.</p>
+          <p class="sc-fit">Best for fashion and style pages</p>
+        </div>
+      </div>
+      <ul class="sc-photos">
+        <li class="sc-photo"><img src="assets/products/clothes/tops.jpeg" alt="Tops" width="600" height="450" loading="lazy" decoding="async"><span>Tops</span></li>
+        <li class="sc-photo"><img src="assets/products/clothes/dresses.jpeg" alt="Dresses" width="600" height="450" loading="lazy" decoding="async"><span>Dresses</span></li>
+        <li class="sc-photo"><img src="assets/products/clothes/trousers.jpeg" alt="Trousers" width="600" height="450" loading="lazy" decoding="async"><span>Trousers</span></li>
+        <li class="sc-photo"><img src="assets/products/clothes/jackets.jpeg" alt="Jackets" width="600" height="450" loading="lazy" decoding="async"><span>Jackets</span></li>
+      </ul>
+    </article>
+
+    <article class="sc-card" style="--i:4">
+      <div class="sc-info">
+        <div class="sc-head">
+          <p class="sc-count">05 / 05</p>
+          <h3 class="sc-name">Shoes</h3>
+        </div>
+        <div class="sc-body">
+          <p class="sc-desc">Sneakers, sandals and formal pairs for every occasion.</p>
+          <p class="sc-fit">Best for fashion, sports and sneaker pages</p>
+        </div>
+      </div>
+      <ul class="sc-photos">
+        <li class="sc-photo"><img src="assets/products/shoes/sneakers.jpeg" alt="Sneakers" width="600" height="450" loading="lazy" decoding="async"><span>Sneakers</span></li>
+        <li class="sc-photo"><img src="assets/products/shoes/sandals.jpeg" alt="Sandals" width="600" height="450" loading="lazy" decoding="async"><span>Sandals</span></li>
+        <li class="sc-photo"><img src="assets/products/shoes/formal.jpeg" alt="Formal shoes" width="600" height="450" loading="lazy" decoding="async"><span>Formal</span></li>
+        <li class="sc-photo"><img src="assets/products/shoes/boots.jpeg" alt="Boots" width="600" height="450" loading="lazy" decoding="async"><span>Boots</span></li>
+      </ul>
+    </article>
+    </div>
+
+    <div class="prod-cta">
+      <p>You'll choose your categories when you sign up, and you can change them any time.</p>
+      <a href="#signup" class="cta-btn">Start Earning</a>
+    </div>
+  </section>
+
+</div><!-- /.site-content -->
 
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel" src="mobile-menu.jsx"></script>
-<script>
-(function () {
-  var tabs = Array.prototype.slice.call(document.querySelectorAll('.ptab'));
-  var panels = Array.prototype.slice.call(document.querySelectorAll('.ptab-panel'));
-  function show(i, focus) {
-    tabs.forEach(function (t, n) {
-      var on = n === i;
-      t.setAttribute('aria-selected', on);
-      t.tabIndex = on ? 0 : -1;
-      panels[n].hidden = !on;
-    });
-    if (focus) tabs[i].focus();
-  }
-  tabs.forEach(function (t, i) {
-    t.addEventListener('click', function () { show(i); });
-    t.addEventListener('keydown', function (e) {
-      var n = tabs.length;
-      if (e.key === 'ArrowRight') show((i + 1) % n, true);
-      else if (e.key === 'ArrowLeft') show((i - 1 + n) % n, true);
-    });
-  });
-})();
-</script>
 
 </body>
 </html>
