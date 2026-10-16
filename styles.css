@@ -216,3 +216,30 @@ body::before {
   .sc-photo:nth-child(1), .sc-photo:nth-child(4) { grid-column: span 4; }
   .sc-photo:nth-child(2), .sc-photo:nth-child(3) { grid-column: span 2; }
 }
+/* ---------- Unresolved decisions (remove before launch) ---------- */
+.todo { background: rgba(255,210,63,.16); color: #ffd23f; border-radius: 4px; padding: 0 .25em; }
+
+/* ---------- FAQ ---------- */
+.faq { padding: 8vh 6vw 10vh; scroll-margin-top: 80px; }
+.faq-list { max-width: 820px; margin: 0 auto; display: grid; gap: .8rem; }
+.faq-item {
+  background: #1d1612; border: 1px solid rgba(255,255,255,.14); border-radius: 16px;
+  transition: border-color .2s ease;
+}
+.faq-item[open] { border-color: rgba(255,122,46,.55); }
+.faq-item summary {
+  list-style: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 1.1rem 1.3rem; font-weight: 700; font-size: 1.02rem; line-height: 1.35;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after {
+  content: "+"; flex: 0 0 auto; width: 28px; height: 28px; display: grid; place-items: center;
+  border-radius: 50%; border: 1px solid rgba(255,255,255,.3);
+  font-size: 1.2rem; font-weight: 400; line-height: 1; color: #ff9f43;
+}
+.faq-item[open] summary::after { content: "\2212"; }
+.faq-item summary:focus-visible { outline: 2px solid #ffd23f; outline-offset: 2px; border-radius: 16px; }
+.faq-a { padding: 0 1.3rem 1.3rem; color: rgba(255,255,255,.75); line-height: 1.65; font-size: .97rem; }
+.faq-a p + p { margin-top: .6rem; }
+.faq-a a { color: #ff9f43; }
