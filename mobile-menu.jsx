@@ -164,7 +164,7 @@ function StaggeredMenu({
   <div className="sm-header-left">
     <img src="assets/afflixnova-logo.png" alt="AfflixNova" className="sm-logo-img-small" />
 <span className="sm-logo-text">AfflixNova</span>
-    <a href="/signup" className="sm-header-signup">Sign Up</a>
+    <a href="signup.html" className="sm-header-signup">Sign Up</a>
   </div>
   <button
           ref={toggleBtnRef}
@@ -189,8 +189,8 @@ function StaggeredMenu({
           <aside ref={panelRef} className="staggered-menu-panel" style={{ ['--sm-accent']: accentColor }} aria-hidden={!open}>
         <div className="sm-panel-inner">
           <div className="sm-panel-auth-row">
-            <a href="/login" className="sm-panel-login">Login</a>
-            <a href="/signup" className="sm-panel-signup">Sign Up</a>
+            <a href="login.html" className="sm-panel-login">Login</a>
+            <a href="signup.html" className="sm-panel-signup">Sign Up</a>
           </div>
           <ul className="sm-panel-list" data-numbering={displayItemNumbering || undefined}>
             {items.map((it, i) => (
@@ -198,6 +198,7 @@ function StaggeredMenu({
                 <a className="sm-panel-item" href={it.link} data-index={i + 1}>
                   <span className="sm-panel-itemLabel">{it.label}</span>
                 </a>
+                <a className="sm-panel-item" href={it.link} data-index={i + 1} onClick={() => { if (openRef.current) toggleMenu(); }}></a>
               </li>
             ))}
           </ul>
@@ -221,10 +222,10 @@ function StaggeredMenu({
 }
 
 const items = [
-  { label: 'Features', link: '#features' },
-  { label: 'Cases', link: '#cases' },
-  { label: 'Monetize', link: '#monetize' },
-  { label: 'Blog', link: '#blog' }
+  { label: 'How it works', link: 'index.html#how-it-works' },
+  { label: 'Categories', link: 'index.html#products' },
+  { label: 'Goods', link: 'goods.html' },
+  { label: 'FAQ', link: 'index.html#faq' }
 ];
 ReactDOM.createRoot(document.getElementById('staggered-menu-root'))
   .render(<StaggeredMenu items={items} openMenuButtonColor="#fff" displayItemNumbering={false} />);
