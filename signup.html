@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Create your account — AfflixNova</title>
+<link rel="icon" type="image/png" href="assets/afflixnova-logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="auth.css">
+</head>
+<body>
+
+<header class="navbar auth-nav">
+  <a href="index.html" class="logo">
+    <img src="assets/afflixnova-logo.png" alt="AfflixNova" class="logo-img">
+    <span class="logo-text"><span class="t-afflix">Afflix</span><span class="t-nova">Nova</span></span>
+  </a>
+  <a href="login.html" class="btn-login">Log in</a>
+</header>
+
+<main class="auth">
+  <div class="auth-card">
+    <span class="eyebrow">Create your account</span>
+    <h1>Start earning with <span class="highlight">AfflixNova</span></h1>
+    <p class="auth-sub">Fill this in once. Choose the categories you want to promote, and you'll get your personal code.</p>
+   
+    <form id="signup-form" novalidate>
+      <div id="form-error" class="form-error" role="alert" hidden></div>
+
+      <fieldset class="f-group">
+        <legend>About you</legend>
+        <div class="field" data-field="fullName">
+          <label for="fullName">Full name</label>
+          <input id="fullName" name="fullName" type="text" autocomplete="name" maxlength="80" placeholder="First and last name">
+          <p class="err" id="err-fullName"></p>
+        </div>
+        <div class="field" data-field="email">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@example.com">
+          <p class="err" id="err-email"></p>
+        </div>
+        <div class="field" data-field="password">
+          <label for="password">Password</label>
+          <div class="pw">
+            <input id="password" name="password" type="password" autocomplete="new-password" placeholder="At least 8 characters">
+            <button type="button" class="pw-toggle" id="pw-toggle" aria-label="Show password" aria-pressed="false">Show</button>
+          </div>
+          <p class="err" id="err-password"></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="f-group">
+        <legend>Where you are and how you get paid</legend>
+        <div class="row-2">
+          <div class="field" data-field="county">
+            <label for="county">County</label>
+            <select id="county" name="county"><option value="">Select your county</option></select>
+            <p class="err" id="err-county"></p>
+          </div>
+          <div class="field" data-field="city">
+            <label for="city">Nearest city or town</label>
+            <input id="city" name="city" type="text" autocomplete="address-level2" maxlength="60" placeholder="e.g. Nakuru">
+            <p class="err" id="err-city"></p>
+          </div>
+        </div>
+        <div class="field" data-field="mpesa">
+          <label for="mpesa">M-Pesa number</label>
+          <input id="mpesa" name="mpesa" type="tel" inputmode="tel" autocomplete="tel" placeholder="0712 345 678">
+          <p class="hint">Your earnings are sent here, so it must be registered in your own name.</p>
+          <p class="err" id="err-mpesa"></p>
+        </div>
+      </fieldset>
+
+      <fieldset class="f-group" id="group-platforms" data-field="platforms">
+        <legend>Where are your followers?</legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="platforms" value="Facebook"><span>Facebook</span></label>
+          <label class="chip"><input type="checkbox" name="platforms" value="WhatsApp"><span>WhatsApp</span></label>
+          <label class="chip"><input type="checkbox" name="platforms" value="Twitter / X"><span>Twitter / X</span></label>
+          <label class="chip"><input type="checkbox" name="platforms" value="Telegram"><span>Telegram</span></label>
+        </div>
+        <p class="err" id="err-platforms"></p>
+      </fieldset>
+
+      <fieldset class="f-group" id="group-categories" data-field="categories">
+        <legend>What do you want to promote?</legend>
+        <div class="chips">
+          <label class="chip"><input type="checkbox" name="categories" value="electronics"><span>Electronics</span></label>
+          <label class="chip"><input type="checkbox" name="categories" value="home"><span>Home accessories</span></label>
+          <label class="chip"><input type="checkbox" name="categories" value="office"><span>Office equipment</span></label>
+          <label class="chip"><input type="checkbox" name="categories" value="clothes"><span>Clothes</span></label>
+          <label class="chip"><input type="checkbox" name="categories" value="shoes"><span>Shoes</span></label>
+        </div>
+        <p class="hint">Pick at least one. You can change these any time.</p>
+        <p class="err" id="err-categories"></p>
+      </fieldset>
+
+      <div class="checks">
+        <div>
+          <label class="check" data-field="over18"><input type="checkbox" id="over18" name="over18"><span>I am 18 years old or older.</span></label>
+          <p class="err" id="err-over18"></p>
+        </div>
+        <div>
+          <label class="check" data-field="terms"><input type="checkbox" id="terms" name="terms"><span>I agree to the <a href="terms.html" target="_blank" rel="noopener">Terms of Service</a> and the <a href="privacy.html" target="_blank" rel="noopener">Privacy Policy</a>.</span></label>
+          <p class="err" id="err-terms"></p>
+        </div>
+      </div>
+
+      <button type="submit" id="submit" class="cta-btn auth-submit">Create my account</button>
+      <p class="auth-alt">Already have an account? <a href="login.html">Log in</a></p>
+    </form>
+  </div>
+</main>
+
+<noscript><p style="text-align:center;padding:2rem">Please turn on JavaScript to create an account.</p></noscript>
+<script type="module" src="signup.js"></script>
+
+</body>
+</html>

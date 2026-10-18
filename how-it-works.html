@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>How It Works | AfflixNova</title>
+    <link rel="icon" type="image/png" href="assets/afflixnova-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="how-it-works.css">
+    <link rel="stylesheet" href="staggered-menu.css">
+    <!-- React -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+</head>
+
+<body>
+<!-- =========================================
+     NAVBAR
+========================================== -->
+
+<nav class="navbar desktop-nav">
+
+    <a href="index.html" class="logo">
+        <img
+            src="assets/afflixnova-logo.png"
+            alt="AfflixNova"
+            class="logo-img"
+        >
+
+        <span class="logo-text">
+            <span class="t-afflix">Afflix</span><span class="t-nova">Nova</span>
+        </span>
+    </a>
+
+    <ul class="nav-links">
+        <li>
+            <a href="index.html#how-it-works">How it works</a>
+        </li>
+
+        <li>
+            <a href="index.html#products">Categories</a>
+        </li>
+
+        <li>
+            <a href="goods.html">Goods</a>
+        </li>
+
+        <li>
+            <a href="index.html#faq">FAQ</a>
+        </li>
+    </ul>
+
+    <div class="auth-buttons">
+        <a href="login.html" class="btn-login">Log in</a>
+        <a href="signup.html" class="btn-signup">Sign up</a>
+    </div>
+
+</nav>
+
+<!-- Mobile navigation -->
+<div id="staggered-menu-root" class="mobile-nav"></div>
+
+    <!-- =========================================
+         HERO
+    ========================================== -->
+
+    <main>
+
+        <section class="hiw-hero">
+
+            <div class="hiw-hero-content">
+
+                <div class="hiw-eyebrow">
+                    HOW AFFLIXNOVA WORKS
+                </div>
+
+                <h1>
+                    Your audience.
+                    <span>Your opportunity.</span>
+                </h1>
+
+                <p class="hiw-hero-description">
+                    AfflixNova connects businesses looking for more customers
+                    with people who already have an audience. Promote products,
+                    share your unique code and earn when your audience buys.
+                </p>
+
+                <div class="hiw-hero-buttons">
+                    <a href="signup.html" class="hiw-btn hiw-btn-primary">
+                        Start Earning
+                    </a>
+
+                    <a href="#advertiser-journey" class="hiw-btn hiw-btn-secondary">
+                        See how it works
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- YOUR HERO IMAGE GOES HERE -->
+
+            <div class="hiw-hero-visual">
+
+                <div class="hiw-image-glow"></div>
+
+                <div class="hiw-image-frame">
+
+                    <img
+                        src="assets/hero.jpg"
+                        alt="How AfflixNova connects advertisers with businesses"
+                    >
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CONNECTION / TWO SIDES
+        ========================================== -->
+
+        <section class="hiw-connection">
+
+            <div class="hiw-section-heading">
+
+                <div class="hiw-eyebrow">
+                    THE AFFLIXNOVA MODEL
+                </div>
+
+                <h2>
+                    Two sides.
+                    <span>One opportunity.</span>
+                </h2>
+
+                <p>
+                    AfflixNova brings businesses and independent advertisers
+                    together so everyone benefits from a successful sale.
+                </p>
+
+            </div>
+
+
+            <div class="hiw-sides">
+
+                <!-- BUSINESS -->
+
+                <div class="hiw-side-card">
+
+                    <div class="hiw-side-number">
+                        01
+                    </div>
+
+                    <div class="hiw-side-icon">
+                        <span>🏢</span>
+                    </div>
+
+                    <h3>
+                        Businesses
+                    </h3>
+
+                    <p>
+                        Businesses with products to sell partner with
+                        AfflixNova to reach more potential customers through
+                        a network of independent advertisers.
+                    </p>
+
+                    <div class="hiw-side-line"></div>
+
+                    <span class="hiw-side-label">
+                        Get more customers
+                    </span>
+
+                </div>
+
+
+                <!-- AFFLIXNOVA -->
+
+                <div class="hiw-connector">
+
+                    <div class="hiw-connector-line"></div>
+
+                    <div class="hiw-connector-logo">
+                        AN
+                    </div>
+
+                    <div class="hiw-connector-line"></div>
+
+                </div>
+
+
+                <!-- ADVERTISER -->
+
+                <div class="hiw-side-card hiw-side-card-highlight">
+
+                    <div class="hiw-side-number">
+                        02
+                    </div>
+
+                    <div class="hiw-side-icon">
+                        <span>📱</span>
+                    </div>
+
+                    <h3>
+                        Advertisers
+                    </h3>
+
+                    <p>
+                        Individuals use their existing social pages and
+                        personal networks to promote products they believe
+                        their audience will love.
+                    </p>
+
+                    <div class="hiw-side-line"></div>
+
+                    <span class="hiw-side-label">
+                        Earn from your audience
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             ADVERTISER JOURNEY
+        ========================================== -->
+
+        <section
+            class="hiw-journey"
+            id="advertiser-journey"
+        >
+
+            <div class="hiw-section-heading">
+
+                <div class="hiw-eyebrow">
+                    YOUR JOURNEY
+                </div>
+
+                <h2>
+                    From sign-up to
+                    <span>your first reward.</span>
+                </h2>
+
+                <p>
+                    Getting started is simple. Here's how you turn your
+                    audience into an earning opportunity.
+                </p>
+
+            </div>
+
+
+            <div class="hiw-steps">
+
+                <!-- STEP 1 -->
+
+                <article class="hiw-step">
+
+                    <div class="hiw-step-top">
+
+                        <span class="hiw-step-number">
+                            01
+                        </span>
+
+                        <div class="hiw-step-icon">
+                            👤
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Create your account
+                    </h3>
+
+                    <p>
+                        Sign up with your details and tell us where you
+                        connect with your audience, such as Facebook,
+                        WhatsApp, TikTok, Telegram or other platforms.
+                    </p>
+
+                </article>
+
+
+                <!-- STEP 2 -->
+
+                <article class="hiw-step">
+
+                    <div class="hiw-step-top">
+
+                        <span class="hiw-step-number">
+                            02
+                        </span>
+
+                        <div class="hiw-step-icon">
+                            🔑
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Get your unique code
+                    </h3>
+
+                    <p>
+                        Once your account is created, AfflixNova gives you
+                        a unique advertiser code connected to your account.
+                    </p>
+
+                </article>
+
+
+                <!-- STEP 3 -->
+
+                <article class="hiw-step">
+
+                    <div class="hiw-step-top">
+
+                        <span class="hiw-step-number">
+                            03
+                        </span>
+
+                        <div class="hiw-step-icon">
+                            📣
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Promote products
+                    </h3>
+
+                    <p>
+                        Browse participating products and share the ones
+                        that fit your audience through the pages and
+                        communities you already manage.
+                    </p>
+
+                </article>
+
+
+                <!-- STEP 4 -->
+
+                <article class="hiw-step">
+
+                    <div class="hiw-step-top">
+
+                        <span class="hiw-step-number">
+                            04
+                        </span>
+
+                        <div class="hiw-step-icon">
+                            💰
+                        </div>
+
+                    </div>
+
+                    <h3>
+                        Earn when you sell
+                    </h3>
+
+                    <p>
+                        When a customer uses your unique code to make a
+                        purchase, the sale is linked to you and your reward
+                        is recorded.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             UNIQUE CODE SECTION
+        ========================================== -->
+
+        <section class="hiw-code-section">
+
+            <div class="hiw-code-content">
+
+                <div class="hiw-eyebrow">
+                    YOUR UNIQUE CODE
+                </div>
+
+                <h2>
+                    One code.
+                    <span>Every sale.</span>
+                </h2>
+
+                <p>
+                    Your unique code connects your promotion to the customer
+                    who buys. It helps the business know where the customer
+                    came from and makes sure your reward can be attributed
+                    to your promotion.
+                </p>
+
+                <div class="hiw-code-example">
+
+                    <div class="hiw-code-label">
+                        YOUR ADVERTISER CODE
+                    </div>
+
+                    <div class="hiw-code-value">
+                        AFX-7K29X
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="hiw-code-flow">
+
+                <div class="hiw-flow-item">
+
+                    <div class="hiw-flow-icon">
+                        📱
+                    </div>
+
+                    <strong>
+                        You post
+                    </strong>
+
+                    <span>
+                        Product + your code
+                    </span>
+
+                </div>
+
+
+                <div class="hiw-flow-arrow">
+                    →
+                </div>
+
+
+                <div class="hiw-flow-item">
+
+                    <div class="hiw-flow-icon">
+                        👀
+                    </div>
+
+                    <strong>
+                        Customer sees it
+                    </strong>
+
+                    <span>
+                        Discovers the offer
+                    </span>
+
+                </div>
+
+
+                <div class="hiw-flow-arrow">
+                    →
+                </div>
+
+
+                <div class="hiw-flow-item">
+
+                    <div class="hiw-flow-icon">
+                        🛒
+                    </div>
+
+                    <strong>
+                        Customer buys
+                    </strong>
+
+                    <span>
+                        Uses your code
+                    </span>
+
+                </div>
+
+
+                <div class="hiw-flow-arrow">
+                    →
+                </div>
+
+
+                <div class="hiw-flow-item hiw-flow-highlight">
+
+                    <div class="hiw-flow-icon">
+                        💰
+                    </div>
+
+                    <strong>
+                        You earn
+                    </strong>
+
+                    <span>
+                        Reward recorded
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             CUSTOMER / BUSINESS BENEFIT
+        ========================================== -->
+
+        <section class="hiw-benefits">
+
+            <div class="hiw-section-heading">
+
+                <div class="hiw-eyebrow">
+                    EVERYONE BENEFITS
+                </div>
+
+                <h2>
+                    A simple connection
+                    <span>that creates value.</span>
+                </h2>
+
+            </div>
+
+
+            <div class="hiw-benefit-grid">
+
+                <div class="hiw-benefit">
+
+                    <span class="hiw-benefit-icon">
+                        🏢
+                    </span>
+
+                    <h3>
+                        Businesses reach more people
+                    </h3>
+
+                    <p>
+                        Businesses gain access to audiences they may not
+                        have reached through traditional advertising alone.
+                    </p>
+
+                </div>
+
+
+                <div class="hiw-benefit">
+
+                    <span class="hiw-benefit-icon">
+                        📢
+                    </span>
+
+                    <h3>
+                        Advertisers monetize their reach
+                    </h3>
+
+                    <p>
+                        You can turn the attention and trust you've built
+                        with your audience into an additional income stream.
+                    </p>
+
+                </div>
+
+
+                <div class="hiw-benefit">
+
+                    <span class="hiw-benefit-icon">
+                        🎁
+                    </span>
+
+                    <h3>
+                        Customers get value
+                    </h3>
+
+                    <p>
+                        Customers can access offers and discounts through
+                        the people and communities they already follow.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================================
+             FINAL CTA
+        ========================================== -->
+
+        <section class="hiw-final-cta">
+
+            <div class="hiw-final-glow"></div>
+
+            <div class="hiw-final-content">
+
+                <div class="hiw-eyebrow">
+                    READY TO GET STARTED?
+                </div>
+
+                <h2>
+                    Your audience is already there.
+                    <span>Now make it work for you.</span>
+                </h2>
+
+                <p>
+                    Join AfflixNova and start discovering products you can
+                    promote to the people who already listen to you.
+                </p>
+
+                <a
+                    href="signup.html"
+                    class="hiw-btn hiw-btn-primary"
+                >
+                    Start Earning
+                </a>
+
+            </div>
+
+        </section>
+        <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <p>Connecting Kenyan businesses with the people who help them grow.</p>
+          <div class="footer-community" id="community">
+            <a href="https://t.me/YOUR_CHANNEL_LINK" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M21.9 4.5 18.6 20c-.2 1-.9 1.3-1.7.8l-4.8-3.5-2.3 2.2c-.3.3-.5.5-1 .5l.4-5 9-8.2c.4-.4-.1-.6-.6-.2L6.8 13 2 11.5c-1-.3-1-1 .2-1.5l19-7.3c.8-.3 1.6.2 1.3 1.8z"/></svg>
+              Telegram
+            </a>
+            <a href="https://wa.me/YOUR_CHANNEL_LINK" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm5.8 14.3c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.7-.6-3-1.3-4.9-4.3-5.1-4.5-.1-.2-1.2-1.6-1.2-3.1s.8-2.2 1.1-2.5c.3-.3.6-.4.8-.4h.6c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.9 1.5 2 2.4 1.3 1.2 2.4 1.6 2.8 1.7.3.1.5.1.7-.1.2-.2.8-.9 1-1.2.2-.3.4-.2.7-.1.3.1 1.7.8 2 1 .3.1.5.2.5.3.1.2.1.7-.1 1.2z"/></svg>
+              WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-col" aria-label="Explore">
+          <h4>Explore</h4>
+          <ul>
+            <li><a href="index.html#how-it-works">How it works</a></li>
+            <li><a href="index.html#products">Categories</a></li>
+            <li><a href="goods.html">Goods</a></li>
+            <li><a href="index.html#faq">FAQ</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Account">
+          <h4>Account</h4>
+          <ul>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="signup.html">Sign up</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-col" aria-label="Legal">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><span class="todo">[CONFIRM: support email]</span></li>
+            <li><span class="todo">[CONFIRM: phone / WhatsApp]</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 AfflixNova. All rights reserved.</p>
+        <p>Earnings are not guaranteed and depend on sales made with your code.</p>
+      </div>
+    </div>
+
+    <div class="footer-word" aria-hidden="true"><span class="fw-a">Afflix</span><span class="fw-n">Nova</span></div>
+  </footer>
+    </main>
+
+
+    <!-- Your existing navbar JavaScript -->
+    <script src="js/staggered-menu.js"></script>
+<!-- React -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+<!-- Babel -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<!-- Mobile navigation -->
+<script type="text/babel" src="mobile-menu.jsx"></script>
+</body>
+</html>
