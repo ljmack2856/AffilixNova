@@ -85,3 +85,111 @@
 .auth-submit[disabled] { opacity: .6; cursor: wait; }
 .auth-alt { margin-top: 1.2rem; text-align: center; font-size: .92rem; color: rgba(255,255,255,.7); }
 .auth-alt a { color: #ff9f43; }
+/* =========================================================
+   GOOGLE SIGNUP
+========================================================= */
+
+.social-signup {
+    margin-top: 1.5rem;
+}
+
+.google-btn {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.75rem;
+
+    padding: 0.85rem 1rem;
+
+    border-radius: 12px;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    background: #ffffff;
+
+    color: #17110e;
+
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform .2s ease,
+        box-shadow .2s ease,
+        background .2s ease;
+}
+
+.google-btn:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,.25);
+}
+
+.google-btn:active {
+    transform: translateY(0);
+}
+
+.google-btn:disabled {
+    opacity: .6;
+    cursor: wait;
+}
+
+
+/* Simple Google G mark */
+
+.google-icon {
+    width: 22px;
+    height: 22px;
+
+    display: grid;
+    place-items: center;
+
+    font-family: Arial, sans-serif;
+
+    font-size: 1.1rem;
+    font-weight: 700;
+
+    color: #4285f4;
+}
+
+
+/* Divider */
+
+.auth-divider {
+    display: flex;
+
+    align-items: center;
+
+    gap: 1rem;
+
+    margin: 1.4rem 0;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+    content: "";
+
+    flex: 1;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.12);
+}
+
+.auth-divider span {
+    font-size: .72rem;
+
+    font-weight: 700;
+
+    letter-spacing: .12em;
+
+    color:
+        rgba(255,255,255,.42);
+}

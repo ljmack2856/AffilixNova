@@ -105,7 +105,6 @@ main {
     line-height: 1.7;
 }
 
-
 /* =========================================================
    HERO
 ========================================================= */
@@ -113,52 +112,57 @@ main {
 .hiw-hero {
     position: relative;
 
-    min-height: 820px;
+    /* Fill the screen naturally beneath the navbar */
+    min-height: calc(100vh - 110px);
 
-    max-width: 1400px;
+    width: 100%;
+    max-width: none;
 
-    margin: 0 auto;
+    margin: 0;
 
-    padding:
-        170px 70px
-        110px;
+    padding: 55px 5vw 65px;
 
     display: grid;
 
-    grid-template-columns:
-        minmax(0, 1fr)
-        minmax(400px, 0.9fr);
+    /* True two-half layout */
+    grid-template-columns: 1fr 1fr;
 
     align-items: center;
 
-    gap: 60px;
+    gap: 40px;
+
+    overflow: hidden;
 }
 
 
-/* Background glow */
+/* =========================================================
+   HERO BACKGROUND GLOWS
+========================================================= */
 
 .hiw-hero::before {
     content: "";
 
     position: absolute;
 
-    width: 650px;
-    height: 500px;
+    width: 700px;
+    height: 550px;
 
-    top: -100px;
-    right: -150px;
+    top: -180px;
+    right: -120px;
 
     background:
         radial-gradient(
             circle,
-            rgba(255, 93, 52, 0.28),
-            rgba(236, 64, 122, 0.12) 40%,
-            transparent 70%
+            rgba(255, 93, 52, 0.25),
+            rgba(236, 64, 122, 0.11) 42%,
+            transparent 72%
         );
 
-    filter: blur(30px);
+    filter: blur(35px);
 
     pointer-events: none;
+
+    z-index: 0;
 }
 
 .hiw-hero::after {
@@ -166,36 +170,46 @@ main {
 
     position: absolute;
 
-    width: 500px;
-    height: 300px;
+    width: 550px;
+    height: 350px;
 
-    left: -150px;
-    bottom: -100px;
+    left: -220px;
+    bottom: -180px;
 
     background:
         radial-gradient(
             circle,
-            rgba(236, 64, 122, 0.18),
+            rgba(236, 64, 122, 0.16),
             transparent 70%
         );
 
-    filter: blur(30px);
+    filter: blur(35px);
 
     pointer-events: none;
+
+    z-index: 0;
 }
 
 
-/* Hero content */
+/* =========================================================
+   HERO CONTENT
+========================================================= */
 
 .hiw-hero-content {
     position: relative;
-    z-index: 2;
 
+    z-index: 3;
+
+    width: 100%;
     max-width: 650px;
+
+    margin: 0;
+
+    padding-left: 10px;
 }
 
 .hiw-hero-content h1 {
-    font-size: clamp(58px, 6vw, 92px);
+    font-size: clamp(58px, 5.8vw, 92px);
 
     line-height: 0.95;
 
@@ -229,6 +243,7 @@ main {
     color: #b9b1ad;
 
     font-size: 19px;
+
     line-height: 1.75;
 
     margin-bottom: 38px;
@@ -236,7 +251,7 @@ main {
 
 
 /* =========================================================
-   BUTTONS
+   HERO BUTTONS
 ========================================================= */
 
 .hiw-hero-buttons {
@@ -247,58 +262,6 @@ main {
     gap: 18px;
 }
 
-.hiw-btn {
-    display: inline-flex;
-
-    align-items: center;
-    justify-content: center;
-
-    min-height: 58px;
-
-    padding: 0 30px;
-
-    border-radius: 999px;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    transition:
-        transform 0.25s ease,
-        box-shadow 0.25s ease,
-        background 0.25s ease;
-}
-
-.hiw-btn:hover {
-    transform: translateY(-3px);
-}
-
-.hiw-btn-primary {
-    color: #fff;
-
-    background:
-        linear-gradient(
-            100deg,
-            #ff613d,
-            #ec407a
-        );
-
-    box-shadow:
-        0 15px 35px
-        rgba(236, 64, 122, 0.2);
-}
-
-.hiw-btn-secondary {
-    border: 1px solid var(--afx-border);
-
-    color: #fff;
-
-    background: rgba(255, 255, 255, 0.015);
-}
-
-.hiw-btn-secondary:hover {
-    background: rgba(255, 255, 255, 0.06);
-}
-
 
 /* =========================================================
    HERO IMAGE
@@ -307,48 +270,172 @@ main {
 .hiw-hero-visual {
     position: relative;
 
-    min-height: 540px;
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 560px;
 
     display: flex;
 
-    align-items: center;
-    justify-content: center;
+    align-items: stretch;
+    justify-content: stretch;
+
+    overflow: visible;
 }
+
+
+/* Glow behind the photograph */
 
 .hiw-image-glow {
     position: absolute;
 
-    width: 480px;
-    height: 480px;
+    width: 85%;
+    height: 85%;
+
+    top: 8%;
+    left: 10%;
 
     border-radius: 50%;
 
     background:
         radial-gradient(
             circle,
-            rgba(255, 106, 61, 0.23),
-            rgba(236, 64, 122, 0.12) 40%,
+            rgba(255, 106, 61, 0.24),
+            rgba(236, 64, 122, 0.12) 42%,
             transparent 70%
         );
 
-    filter: blur(15px);
+    filter: blur(25px);
+
+    z-index: 0;
 }
+
+
+/*
+   This is now a full hero-half image,
+   rather than a small floating image.
+*/
 
 .hiw-image-frame {
     position: relative;
 
-    width: min(100%, 560px);
+    width: 100%;
+    height: 100%;
+
+    min-height: 560px;
 
     z-index: 1;
+
+    overflow: hidden;
+
+    border-radius: 28px;
+
+    /*
+       Very subtle shadow so the photograph
+       separates from the background without
+       looking like a card.
+    */
+    box-shadow:
+        0 30px 80px rgba(0, 0, 0, 0.28);
 }
+
+
+/*
+   Dark-to-transparent blend on the LEFT side
+   of the photograph.
+
+   This makes the image visually disappear
+   into the text area instead of looking like
+   a separate rectangular block.
+*/
+
+.hiw-image-frame::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0c0b0a 0%,
+            rgba(12, 11, 10, 0.94) 4%,
+            rgba(12, 11, 10, 0.72) 11%,
+            rgba(12, 11, 10, 0.38) 19%,
+            rgba(12, 11, 10, 0.08) 30%,
+            transparent 42%
+        );
+}
+
+
+/*
+   Subtle darkening toward the bottom.
+   Helps the image sit naturally inside the
+   dark AfflixNova environment.
+*/
+
+.hiw-image-frame::after {
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    background:
+        linear-gradient(
+            180deg,
+            transparent 55%,
+            rgba(12, 11, 10, 0.18) 78%,
+            rgba(12, 11, 10, 0.45) 100%
+        );
+}
+
+
+/*
+   Make the actual photograph fill the
+   entire right half.
+*/
 
 .hiw-image-frame img {
-    width: 100%;
+    position: relative;
 
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center center;
+
+    z-index: 1;
+
+    transform: scale(1.015);
+
+    transition:
+        transform 0.7s ease;
 }
 
 
+/*
+   Very subtle hover movement.
+*/
+
+.hiw-image-frame:hover img {
+    transform: scale(1.035);
+}
 /* =========================================================
    CONNECTION SECTION
 ========================================================= */
@@ -1031,34 +1118,6 @@ main {
 
 @media (max-width: 1050px) {
 
-    .hiw-hero {
-        grid-template-columns: 1fr;
-
-        padding:
-            150px 50px
-            80px;
-
-        text-align: center;
-    }
-
-    .hiw-hero-content {
-        max-width: 800px;
-        margin: auto;
-    }
-
-    .hiw-hero-description {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hiw-hero-buttons {
-        justify-content: center;
-    }
-
-    .hiw-hero-visual {
-        min-height: 420px;
-    }
-
     .hiw-steps {
         grid-template-columns:
             repeat(2, 1fr);
@@ -1183,5 +1242,119 @@ main {
 
     .hiw-final-content h2 {
         font-size: 43px;
+    }
+}
+/* =========================================================
+   RESPONSIVE HERO
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .hiw-hero {
+        min-height: auto;
+
+        padding:
+            90px 50px
+            80px;
+
+        grid-template-columns: 1fr;
+
+        gap: 55px;
+
+        text-align: center;
+    }
+
+    .hiw-hero-content {
+        max-width: 800px;
+
+        margin: auto;
+
+        padding-left: 0;
+    }
+
+    .hiw-hero-description {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hiw-hero-buttons {
+        justify-content: center;
+    }
+
+    .hiw-hero-visual {
+        min-height: 500px;
+
+        width: 100%;
+    }
+
+    .hiw-image-frame {
+        min-height: 500px;
+
+        border-radius: 25px;
+    }
+
+    /*
+       On tablet, reduce the blend because
+       the image is now below the text.
+    */
+
+    .hiw-image-frame::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(12, 11, 10, 0.15),
+                transparent 25%
+            );
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .hiw-hero {
+        padding:
+            70px 25px
+            60px;
+
+        gap: 40px;
+    }
+
+    .hiw-hero-content h1 {
+        font-size: 54px;
+
+        letter-spacing: -3px;
+    }
+
+    .hiw-hero-description {
+        font-size: 16px;
+    }
+
+    .hiw-hero-buttons {
+        flex-direction: column;
+
+        width: 100%;
+    }
+
+    .hiw-btn {
+        width: 100%;
+    }
+
+    .hiw-hero-visual {
+        min-height: 380px;
+    }
+
+    .hiw-image-frame {
+        min-height: 380px;
+
+        border-radius: 22px;
+    }
+
+    .hiw-image-frame::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(12, 11, 10, 0.12),
+                transparent 30%
+            );
     }
 }
