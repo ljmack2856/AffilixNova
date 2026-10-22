@@ -288,15 +288,16 @@ body::before {
   font-size: .85rem; color: rgba(255,255,255,.55);
 }
 
-/* Giant wordmark: sized to the footer width, fading out at the bottom */
 .footer-word {
+  display: flex; align-items: center; justify-content: center;
   margin-top: 1.5rem; margin-bottom: -.2em;
   font-family: 'Poppins', sans-serif; font-weight: 800;
-  font-size: 19.4cqw; letter-spacing: -.045em; line-height: 1;
-  text-align: center; white-space: nowrap; user-select: none;
+  font-size: 14.8cqw; letter-spacing: -.045em; line-height: 1;
+  white-space: nowrap; user-select: none;
   -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 90%);
   mask-image: linear-gradient(to bottom, #000 40%, transparent 90%);
 }
+.footer-word img { height: .8em; width: auto; margin-right: .08em; }
 .fw-a { color: #ececec; }
 .fw-n { background: var(--nova); -webkit-background-clip: text; background-clip: text; color: transparent; }
 
@@ -305,3 +306,34 @@ body::before {
   .footer-brand { grid-column: 1 / -1; }
 }
 @media (max-width: 480px) { .footer-inner { padding-top: 3.5rem; } }
+/* ---------- Signed-in / signed-out navbar ---------- */
+.auth-in { display: none; }
+html[data-auth="in"] .auth-out { display: none; }
+html[data-auth="in"] .auth-in { display: block; }
+/* hidden until Firebase answers; the animation reveals it after 3s even if the script fails */
+html:not([data-auth]) .auth-area { visibility: hidden; animation: afx-reveal 0s 3s forwards; }
+@keyframes afx-reveal { to { visibility: visible; } }
+
+.profile { position: relative; }
+.profile-btn {
+  width: 42px; height: 42px; border-radius: 50%; border: 0; cursor: pointer;
+  font: inherit; font-weight: 700; font-size: .9rem; color: #fff;
+  background: linear-gradient(135deg, #ff5e3a, #ec407a);
+  box-shadow: 0 6px 18px rgba(236,64,122,.35);
+}
+.profile-btn:focus-visible { outline: 2px solid #ffd23f; outline-offset: 3px; }
+.profile-menu {
+  position: absolute; right: 0; top: calc(100% + .6rem); z-index: 50; min-width: 220px; padding: .6rem;
+  background: #1d1612; border: 1px solid rgba(255,255,255,.14); border-radius: 16px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.5);
+}
+.profile-menu[hidden] { display: none; }
+.profile-name {
+  margin-bottom: .3rem; padding: .5rem .7rem .7rem; font-size: .85rem; color: rgba(255,255,255,.6);
+  border-bottom: 1px solid rgba(255,255,255,.1); overflow-wrap: anywhere;
+}
+.profile-menu a, .profile-menu button {
+  display: block; width: 100%; padding: .65rem .7rem; border: 0; border-radius: 10px; cursor: pointer;
+  background: transparent; color: #fff; font: inherit; font-size: .95rem; text-align: left; text-decoration: none;
+}
+.profile-menu a:hover, .profile-menu button:hover { background: rgba(255,255,255,.08); }

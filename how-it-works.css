@@ -1358,3 +1358,13 @@ main {
             );
     }
 }
+.footer-word {
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1.5rem; margin-bottom: -.2em;
+  font-family: 'Poppins', sans-serif; font-weight: 800;
+  font-size: 14.8cqw; letter-spacing: -.045em; line-height: 1;
+  white-space: nowrap; user-select: none;
+  -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent 90%);
+  mask-image: linear-gradient(to bottom, #000 40%, transparent 90%);
+}
+.footer-word img { height: .8em; width: auto; margin-right: .08em; }

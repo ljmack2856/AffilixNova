@@ -57,10 +57,20 @@
         </li>
     </ul>
 
-    <div class="auth-buttons">
-        <a href="login.html" class="btn-login">Log in</a>
-        <a href="signup.html" class="btn-signup">Sign up</a>
+    <div class="auth-area">
+  <div class="auth-buttons auth-out">
+    <a href="login.html" class="btn-login">Login</a>
+    <a href="signup.html" class="btn-signup">Sign Up</a>
+  </div>
+  <div class="profile auth-in">
+    <button type="button" class="profile-btn" id="profile-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Account menu"><span data-user-initials></span></button>
+    <div class="profile-menu" id="profile-menu" role="menu" hidden>
+      <p class="profile-name" data-user-name></p>
+      <a href="dashboard.html" role="menuitem">Dashboard</a>
+      <button type="button" id="logout-btn" role="menuitem">Log out</button>
     </div>
+  </div>
+</div>
 
 </nav>
 
@@ -684,7 +694,7 @@
       </div>
     </div>
 
-    <div class="footer-word" aria-hidden="true"><span class="fw-a">Afflix</span><span class="fw-n">Nova</span></div>
+     <div class="footer-word" aria-hidden="true"><img src="assets/afflixnova-logo.png" alt=""><span class="fw-a">Afflix</span><span class="fw-n">Nova</span></div>
   </footer>
     </main>
 
@@ -703,5 +713,6 @@
 
 <!-- Mobile navigation -->
 <script type="text/babel" src="mobile-menu.jsx"></script>
+<script type="module" src="nav-auth.js"></script>
 </body>
 </html>

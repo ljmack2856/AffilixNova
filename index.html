@@ -22,15 +22,25 @@
       <span class="logo-text"><span class="t-afflix">Afflix</span><span class="t-nova">Nova</span></span>
     </a>
     <ul class="nav-links">
-      <li><a href="index.html#how-it-works">How it works</a></li>
-      <li><a href="index.html#products">Categories</a></li>
+      <li><a href="#how-it-works">How it works</a></li>
+      <li><a href="#products">Categories</a></li>
       <li><a href="goods.html">Goods</a></li>
-      <li><a href="index.html#faq">FAQ</a></li>
+      <li><a href="#faq">FAQ</a></li>
     </ul>
-    <div class="auth-buttons">
-      <a href="login.html" class="btn-login">Login</a>
-      <a href="signup.html" class="btn-signup">Sign Up</a>
+    <div class="auth-area">
+  <div class="auth-buttons auth-out">
+    <a href="login.html" class="btn-login">Login</a>
+    <a href="signup.html" class="btn-signup">Sign Up</a>
+  </div>
+  <div class="profile auth-in">
+    <button type="button" class="profile-btn" id="profile-btn" aria-haspopup="menu" aria-expanded="false" aria-label="Account menu"><span data-user-initials></span></button>
+    <div class="profile-menu" id="profile-menu" role="menu" hidden>
+      <p class="profile-name" data-user-name></p>
+      <a href="dashboard.html" role="menuitem">Dashboard</a>
+      <button type="button" id="logout-btn" role="menuitem">Log out</button>
     </div>
+  </div>
+</div>
   </nav>
 
   <!-- Mobile navbar: React island (StaggeredMenu) mounts here -->
@@ -438,10 +448,10 @@
         <nav class="footer-col" aria-label="Explore">
           <h4>Explore</h4>
           <ul>
-            <li><a href="index.html#how-it-works">How it works</a></li>
-            <li><a href="index.html#products">Categories</a></li>
+            <li><a href="#how-it-works">How it works</a></li>
+            <li><a href="#products">Categories</a></li>
             <li><a href="goods.html">Goods</a></li>
-            <li><a href="index.html#faq">FAQ</a></li>
+            <li><a href="#faq">FAQ</a></li>
           </ul>
         </nav>
 
@@ -477,7 +487,7 @@
       </div>
     </div>
 
-    <div class="footer-word" aria-hidden="true"><span class="fw-a">Afflix</span><span class="fw-n">Nova</span></div>
+    <div class="footer-word" aria-hidden="true"><img src="assets/afflixnova-logo.png" alt=""><span class="fw-a">Afflix</span><span class="fw-n">Nova</span></div>
   </footer>
 </div><!-- /.site-content -->
 
@@ -486,6 +496,6 @@
 <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
 <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel" src="mobile-menu.jsx"></script>
-
+<script type="module" src="nav-auth.js"></script>
 </body>
 </html>

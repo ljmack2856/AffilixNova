@@ -424,3 +424,22 @@
 .sm-footer-link:active { background: rgba(255,255,255,.2); }
 .sm-panel-login { color: #fff; border: 1px solid rgba(255,255,255,.3); background: transparent; }
 .sm-panel-signup { color: #100e0b; background: #fff; }
+/* fixed header height so "Close" always sits at the same level as the profile icon */
+.staggered-menu-header { height: 64px; padding: 0 1.25em; }
+.staggered-menu-panel { padding-top: 5em; }
+
+.sm-panel-profile {
+  position: absolute; top: 13px; left: 1.25em; z-index: 3;
+  display: flex; align-items: center; gap: .65rem; text-decoration: none; color: #fff;
+}
+.sm-avatar {
+  width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%;
+  background: linear-gradient(135deg, #ff5e3a, #ec407a); font-weight: 700; font-size: .85rem;
+}
+.sm-profile-name { font-weight: 600; font-size: .95rem; }
+
+.sm-panel-logout {
+  align-self: flex-start; padding: .65rem 1.4rem; border-radius: 999px; cursor: pointer;
+  border: 1px solid rgba(255,255,255,.3); background: transparent; color: #fff;
+  font: inherit; font-weight: 600; font-size: .95rem;
+}
